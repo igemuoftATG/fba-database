@@ -32,20 +32,23 @@ class Tree:
 
     def find_text(self, txt):
         ''' (Tree, str) -> list of list of int
-        Return all paths that leads to where txt can be found in self
+        Return a list of list of int, which represents all the possible
+        paths from the top node that contains txt
         '''
         pass
 
     def find_attr(self, att):
         ''' (Tree, str) -> list of list of int
-        Return all paths that leads to where txt can be found in self
+        Return a list of list of int, which represents all the possible
+        paths from the top node that contains attr
         '''
         pass
 
 
     def find_tag(self, tag):
         ''' (Tree, str) -> list of list of int
-        Return all paths that leads to where txt can be found in self
+        Return a list of list of int, which represents all the possible
+        paths from the top node that contains tag
         '''
         pass
 
