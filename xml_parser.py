@@ -30,12 +30,23 @@ class Tree:
         for x in self.children:
             x.make_children()
 
-    def find_text(self, txt):
+    def find_text(self, txt, node=None, path=[]):
         ''' (Tree, str) -> list of list of int
         Return a list of list of int, which represents all the possible
         paths from the top node that contains txt
         '''
-        pass
+
+        node = self.root if node is None else node
+
+
+        if (node.text.strip() != ''):
+            print("GOT TEXT")
+            print(path)
+
+        else:
+            for x in range(len(node.children)):
+                path = path.append(x)
+                x.find_text(txt, node.children[x], path)
 
     def find_attr(self, att):
         ''' (Tree, str) -> list of list of int
@@ -58,9 +69,10 @@ if __name__ == '__main__':
     SBML_DIR = 'subset' if len(sys.argv) < 2 else sys.argv[1]
     FILE_PATHS = [SBML_DIR + '/' + x for x in os.listdir(SBML_DIR)]
 
-    path = FILE_PATHS[0]
+    path = 'subset/small.xml'
     ET = (ElementTree.parse(path).getroot())
 
     SampleTree = Tree(ET)
-    print(SampleTree)
+    #print(SampleTree)
+    SampleTree.find_text('Visual')
 
