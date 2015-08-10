@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>getCompartments.coffee</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+  <link rel="stylesheet" media="all" href="docco.css" />
+</head>
+<body>
+  <div id="container">
+    <div id="background"></div>
+    
+    <ul class="sections">
+        
+          <li id="title">
+              <div class="annotation">
+                  <h1>getCompartments.coffee</h1>
+              </div>
+          </li>
+        
+        
+        
+        <li id="section-1">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-1">&#182;</a>
+              </div>
+              <p>For reading and writing JSONs</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>fs = <span class="hljs-built_in">require</span> <span class="hljs-string">"fs"</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-2">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-2">&#182;</a>
+              </div>
+              <p>Return true if two arrays are identical. False otherwise.
+Order is not important.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="hljs-function"><span class="hljs-title">arrayEquals</span> = <span class="hljs-params">(arr1, arr2)</span> -&gt;</span>
+    <span class="hljs-keyword">if</span> arr1.length <span class="hljs-keyword">isnt</span> arr2.length
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>
+
+    <span class="hljs-keyword">for</span> key <span class="hljs-keyword">in</span> arr1
+        <span class="hljs-keyword">if</span> key <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> arr2
+            <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>
+
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-3">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-3">&#182;</a>
+              </div>
+              <p>First CLI argument is directory containing only .json’s</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>json_dir = process.argv[<span class="hljs-number">2</span>]</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-4">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-4">&#182;</a>
+              </div>
+              <p>Parse each file in json_dir as JSON, store objects as array in json_models</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>files = (file <span class="hljs-keyword">for</span> file <span class="hljs-keyword">in</span> fs.readdirSync(json_dir))
+json_models = (JSON.parse(fs.readFileSync(<span class="hljs-string">"<span class="hljs-subst">#{json_dir}</span>/<span class="hljs-subst">#{file}</span>"</span>)) <span class="hljs-keyword">for</span> file <span class="hljs-keyword">in</span> files)</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-5">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-5">&#182;</a>
+              </div>
+              <p>The main object we will store compartment info in, and will be written to compartments.json</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>compartments = <span class="hljs-keyword">new</span> Object()</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-6">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-6">&#182;</a>
+              </div>
+              <p>The species object</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>compartments.species = <span class="hljs-keyword">new</span> Object()</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-7">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-7">&#182;</a>
+              </div>
+              <p>Loop through each metabolic model</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="hljs-keyword">for</span> model,i <span class="hljs-keyword">in</span> json_models</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-8">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-8">&#182;</a>
+              </div>
+              <p>P. putida KT2440 has no ID</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    <span class="hljs-keyword">if</span> model.id <span class="hljs-keyword">is</span> <span class="hljs-string">""</span> <span class="hljs-keyword">then</span> model.id = <span class="hljs-string">"noId-<span class="hljs-subst">#{i}</span>"</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-9">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-9">&#182;</a>
+              </div>
+              <p>Species object uses model IDs ad keys</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    compartments.species[model.id] = <span class="hljs-keyword">new</span> Object()</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-10">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-10">&#182;</a>
+              </div>
+              <p>and have compartments (array) and file (string) attributes</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    modelCompartments = compartments.species[model.id].compartments = <span class="hljs-keyword">new</span> Array
+    compartments.species[model.id].file = files[i]</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-11">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-11">&#182;</a>
+              </div>
+              <p>Loop through each metabolite for a model</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    <span class="hljs-keyword">for</span> metabolite <span class="hljs-keyword">in</span> model.metabolites</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-12">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-12">&#182;</a>
+              </div>
+              <p>Add compartment to array if its not already there</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>        <span class="hljs-keyword">if</span> metabolite.compartment <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> modelCompartments
+            modelCompartments.push(metabolite.compartment)</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-13">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-13">&#182;</a>
+              </div>
+              <p>Array of different types of groups of compartments</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>compartments.types = <span class="hljs-keyword">new</span> Array()
+<span class="hljs-keyword">for</span> model,i <span class="hljs-keyword">in</span> json_models
+    modelCompartments = compartments.species[model.id].compartments
+    <span class="hljs-keyword">if</span> <span class="hljs-literal">true</span> <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> (arrayEquals(modelCompartments, compartments.types[key]) <span class="hljs-keyword">for</span> key <span class="hljs-keyword">of</span> compartments.types)
+        compartments.types.push(modelCompartments)</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-14">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-14">&#182;</a>
+              </div>
+              <p>Object for storing compatible models</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>compartments.compatibles = <span class="hljs-keyword">new</span> Object()</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-15">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-15">&#182;</a>
+              </div>
+              <p>Instantiate empty array for each type of compartment group</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="hljs-keyword">for</span> type, i <span class="hljs-keyword">in</span> compartments.types
+    compartments.compatibles[i] = <span class="hljs-keyword">new</span> Array()</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-16">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-16">&#182;</a>
+              </div>
+              <p>Models are compatible if they employ the same group of compartments</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="hljs-keyword">for</span> model <span class="hljs-keyword">in</span> json_models
+    <span class="hljs-keyword">for</span> type, i <span class="hljs-keyword">in</span> compartments.types
+        <span class="hljs-keyword">if</span> arrayEquals(compartments.species[model.id].compartments, type)
+            compartments.compatibles[i].push(model.id)</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-17">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-17">&#182;</a>
+              </div>
+              <p>Because I didn’t think ahead</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>compartments.compartments = <span class="hljs-keyword">new</span> Array()
+<span class="hljs-keyword">for</span> type, i <span class="hljs-keyword">in</span> compartments.types
+    cmpts =
+        <span class="hljs-attribute">compartments</span>: type,
+        <span class="hljs-attribute">compatible</span>: compartments.compatibles[i]
+    compartments.compartments.push(cmpts)
+    
+<span class="hljs-keyword">delete</span> compartments.types
+<span class="hljs-keyword">delete</span> compartments.compatibles</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-18">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-18">&#182;</a>
+              </div>
+              <p>Write to filesystem</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>fs.writeFileSync(<span class="hljs-string">"compartments.json"</span>, JSON.stringify(compartments))</pre></div></div>
+            
+        </li>
+        
+    </ul>
+  </div>
+</body>
+</html>
