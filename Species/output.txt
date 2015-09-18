@@ -1,0 +1,108 @@
+nside-193-184:fba-database jmazz$ python convert_folder.py 
+cobra/io/sbml.py:199 UserWarning: GLCAMN appears as a reactant and product R064
+SBML at Acinetobacter baumannii AYE.xml --> JSON at Acinetobacter baumannii AYE.json
+SBML at Acinetobacter baylyi ADP1.xml --> JSON at Acinetobacter baylyi ADP1.json
+SBML at Bacillus subtilis.xml --> JSON at Bacillus subtilis.json
+SBML at Burkholderia cenocepacia J2315.xml --> JSON at Burkholderia cenocepacia J2315.json
+cobra/core/Formula.py:56 UserWarning: 35.7 is not an integer (in formula C35.7H67.8O5)
+cobra/core/Formula.py:56 UserWarning: 67.8 is not an integer (in formula C35.7H67.8O5)
+cobra/core/Formula.py:56 UserWarning: 19.35 is not an integer (in formula C19.35H36.90O7P)
+cobra/core/Formula.py:56 UserWarning: 36.9 is not an integer (in formula C19.35H36.90O7P)
+cobra/core/Formula.py:41 UserWarning: parenthesis found in formula 'C15H14O2(C5H8)'
+cobra/core/Formula.py:56 UserWarning: 41.7 is not an integer (in formula C41.7H77.8O10)
+cobra/core/Formula.py:56 UserWarning: 77.8 is not an integer (in formula C41.7H77.8O10)
+cobra/core/Formula.py:56 UserWarning: 44.7 is not an integer (in formula C44.7H78.8N3O15P2)
+cobra/core/Formula.py:56 UserWarning: 78.8 is not an integer (in formula C44.7H78.8N3O15P2)
+cobra/core/Formula.py:56 UserWarning: 74.4 is not an integer (in formula C74.4H139.6O17P2)
+cobra/core/Formula.py:56 UserWarning: 139.6 is not an integer (in formula C74.4H139.6O17P2)
+cobra/core/Formula.py:56 UserWarning: 47.7 is not an integer (in formula C47.7H87.8O15)
+cobra/core/Formula.py:56 UserWarning: 87.8 is not an integer (in formula C47.7H87.8O15)
+cobra/core/Formula.py:41 UserWarning: parenthesis found in formula 'C20H28N6O13PR(C5H8O6PR)'
+cobra/core/Formula.py:41 UserWarning: parenthesis found in formula 'C16H18O2(C5H8)'
+cobra/core/Formula.py:41 UserWarning: parenthesis found in formula 'C16H16O2(C5H8)'
+cobra/core/Formula.py:56 UserWarning: 35.7 is not an integer (in formula C35.7H66.8O8P)
+cobra/core/Formula.py:56 UserWarning: 66.8 is not an integer (in formula C35.7H66.8O8P)
+cobra/core/Formula.py:56 UserWarning: 37.7 is not an integer (in formula C37.7H73.8NO8P)
+cobra/core/Formula.py:56 UserWarning: 73.8 is not an integer (in formula C37.7H73.8NO8P)
+cobra/core/Formula.py:56 UserWarning: 38.7 is not an integer (in formula C38.7H73.8O10P)
+cobra/core/Formula.py:56 UserWarning: 73.8 is not an integer (in formula C38.7H73.8O10P)
+cobra/core/Formula.py:56 UserWarning: 38.7 is not an integer (in formula C38.7H72.8O13P2)
+cobra/core/Formula.py:56 UserWarning: 72.8 is not an integer (in formula C38.7H72.8O13P2)
+cobra/core/Formula.py:56 UserWarning: 38.7 is not an integer (in formula C38.7H75.8NO8P)
+cobra/core/Formula.py:56 UserWarning: 75.8 is not an integer (in formula C38.7H75.8NO8P)
+cobra/core/Formula.py:56 UserWarning: 38.7 is not an integer (in formula C38.7H72.8NO10P)
+cobra/core/Formula.py:56 UserWarning: 72.8 is not an integer (in formula C38.7H72.8NO10P)
+cobra/core/Formula.py:41 UserWarning: parenthesis found in formula 'C19H20N7O6(C5H7NO3)'
+cobra/core/Formula.py:41 UserWarning: parenthesis found in formula 'C15H21N5O10PR(C5H8O6PR)'
+cobra/io/sbml.py:269 UserWarning: gene_reaction_rule is not ascii compliant
+SBML at Clostridium beijerinckii NCIMB 8052.xml --> JSON at Clostridium beijerinckii NCIMB 8052.json
+cobra/core/Formula.py:41 UserWarning: parenthesis found in formula 'C23H38N7O17P3S(CH2)2n'
+cobra/core/Formula.py:41 UserWarning: parenthesis found in formula 'C16H16O2(C5H8)n'
+cobra/core/Formula.py:41 UserWarning: parenthesis found in formula 'C16H18O2(C5H8)n'
+cobra/core/Formula.py:41 UserWarning: parenthesis found in formula 'C15H14O2(C5H8)n'
+cobra/core/Formula.py:41 UserWarning: parenthesis found in formula 'C2H4NO2R(C2H2NOR)n'
+cobra/core/Formula.py:41 UserWarning: parenthesis found in formula 'C10H18O13P2R2(C5H8O6PR)n'
+cobra/core/Formula.py:41 UserWarning: parenthesis found in formula 'C10H17O8PR2(C5H8O5PR)n'
+SBML at Clostridium difficile strain 630.xml --> JSON at Clostridium difficile strain 630.json
+SBML at Clostridium thermocellum.xml --> JSON at Clostridium thermocellum.json
+SBML at Cyanothece 51142 iCyt773.xml --> JSON at Cyanothece 51142 iCyt773.json
+SBML at Cyanothece sp. ATCC 51142.xml --> JSON at Cyanothece sp. ATCC 51142.json
+SBML at Dehalococcoides iAI549.xml --> JSON at Dehalococcoides iAI549.json
+SBML at Escherichia coli K-12 MG1655.xml --> JSON at Escherichia coli K-12 MG1655.json
+cobra/io/sbml.py:199 UserWarning: M_metsox_S appears as a reactant and product METSOX1abcpp
+cobra/io/sbml.py:199 UserWarning: M_metsox_S appears as a reactant and product METSOX1tex
+cobra/io/sbml.py:199 UserWarning: M_metsox_R appears as a reactant and product METSOX2abcpp
+cobra/io/sbml.py:199 UserWarning: M_metsox_R appears as a reactant and product METSOX2tex
+SBML at Escherichia coli W (ATCC 9637).xml --> JSON at Escherichia coli W (ATCC 9637).json
+SBML at Klebsiella pneumoniae MGH 78578.xml --> JSON at Klebsiella pneumoniae MGH 78578.json
+SBML at Kluyveromyces lactis.xml --> JSON at Kluyveromyces lactis.json
+SBML at Mycobacterium tuberculosis iNJ661m.xml --> JSON at Mycobacterium tuberculosis iNJ661m.json
+SBML at Mycobacterium tuberculosis iNJ661v.xml --> JSON at Mycobacterium tuberculosis iNJ661v.json
+SBML at Mycoplasma genitalium iPS189.xml --> JSON at Mycoplasma genitalium iPS189.json
+SBML at Mycoplasma pneumoniae.xml --> JSON at Mycoplasma pneumoniae.json
+cobra/core/Formula.py:41 UserWarning: parenthesis found in formula 'C13H16O4(C5H8)n'
+cobra/core/Formula.py:41 UserWarning: parenthesis found in formula 'C13H16O3(C5H8)n'
+cobra/core/Formula.py:41 UserWarning: parenthesis found in formula 'C12H14O3(C5H8)n'
+cobra/core/Formula.py:41 UserWarning: parenthesis found in formula 'C12H16O2(C5H8)n'
+cobra/core/Formula.py:41 UserWarning: parenthesis found in formula 'C12H14O4(C5H8)n'
+cobra/core/Formula.py:41 UserWarning: parenthesis found in formula 'C5H12O7P2(C5H8)n'
+cobra/core/Formula.py:41 UserWarning: parenthesis found in formula 'C12H20NO11PR2(C5H8O6PR)n'
+cobra/core/Formula.py:41 UserWarning: parenthesis found in formula 'C13H22NO11PR2(C5H8O6PR)n'
+cobra/core/Formula.py:41 UserWarning: parenthesis found in formula 'C21H33N9O11PR(C5H8O6PR)n'
+cobra/core/Formula.py:41 UserWarning: parenthesis found in formula 'C14H23N2O12PR2(C5H8O6PR)n'
+cobra/core/Formula.py:41 UserWarning: parenthesis found in formula 'C14H22NO13PR2(C5H8O6PR)n'
+cobra/core/Formula.py:41 UserWarning: parenthesis found in formula 'C18H26N6O11PSR(C5H8O6PR)n'
+cobra/core/Formula.py:41 UserWarning: parenthesis found in formula 'C20H29N7O12PR(C5H8O6PR)n'
+cobra/core/Formula.py:41 UserWarning: parenthesis found in formula 'C20H28N6O13PR(C5H8O6PR)n'
+cobra/core/Formula.py:41 UserWarning: parenthesis found in formula 'C16H24N3O11PR2(C5H8O6PR)n'
+cobra/core/Formula.py:41 UserWarning: parenthesis found in formula 'C21H32N6O11PR(C5H8O6PR)n'
+cobra/core/Formula.py:41 UserWarning: parenthesis found in formula '(C6H13NO7PR)2'
+cobra/core/Formula.py:41 UserWarning: parenthesis found in formula 'C16H29N2O11PR2(C5H8O6PR)n'
+cobra/core/Formula.py:41 UserWarning: parenthesis found in formula 'C20H30N6O11PSR(C5H8O6PR)n'
+cobra/core/Formula.py:41 UserWarning: parenthesis found in formula 'C19H26NO11PR2(C5H8O6PR)n'
+cobra/core/Formula.py:41 UserWarning: parenthesis found in formula 'C15H24NO11PR2(C5H8O6PR)n'
+cobra/core/Formula.py:41 UserWarning: parenthesis found in formula 'C13H22NO12PR2(C5H8O6PR)n'
+cobra/core/Formula.py:41 UserWarning: parenthesis found in formula 'C14H24NO12PR2(C5H8O6PR)n'
+cobra/core/Formula.py:41 UserWarning: parenthesis found in formula 'C26H31N7O11PR(C5H8O6PR)n'
+cobra/core/Formula.py:41 UserWarning: parenthesis found in formula 'C24H30N6O12PR(C5H8O6PR)n'
+cobra/core/Formula.py:41 UserWarning: parenthesis found in formula 'C20H30N6O11PR(C5H8O6PR)n'
+cobra/core/Formula.py:41 UserWarning: parenthesis found in formula 'C10H17O10PR2(C5H8O6PR)n'
+cobra/core/Formula.py:41 UserWarning: parenthesis found in formula 'C14H18O4(C5H8)n'
+cobra/core/Formula.py:41 UserWarning: parenthesis found in formula 'C16H26NO12PSR2(C5H8O6PR)n'
+cobra/core/Formula.py:41 UserWarning: parenthesis found in formula 'C14H20O4(C5H8)n'
+SBML at Penicillium chrysogenum.xml --> JSON at Penicillium chrysogenum.json
+SBML at Pseudomonas putida KT2440 .xml --> JSON at Pseudomonas putida KT2440 .json
+SBML at Rhodobacter sphaeroides.xml --> JSON at Rhodobacter sphaeroides.json
+SBML at Salmonella Typhimurium LT2.xml --> JSON at Salmonella Typhimurium LT2.json
+SBML at Sinorhizobium meliloti.xml --> JSON at Sinorhizobium meliloti.json
+SBML at Sodalis glossinidius.xml --> JSON at Sodalis glossinidius.json
+cobra/io/sbml.py:199 UserWarning: M_Mo_e appears as a reactant and product MotexX
+cobra/io/sbml.py:199 UserWarning: M_Na_e appears as a reactant and product NatexX
+SBML at Spirulina platensis C1.xml --> JSON at Spirulina platensis C1.json
+cobra/io/sbml.py:199 UserWarning: M_POLYGP_c appears as a reactant and product 678
+SBML at Streptomyces coelicolor.xml --> JSON at Streptomyces coelicolor.json
+SBML at Synechocystis iSyn731.xml --> JSON at Synechocystis iSyn731.json
+SBML at Synechocystis sp. PCC6803.xml --> JSON at Synechocystis sp. PCC6803.json
+cobra/io/sbml.py:199 UserWarning: STA appears as a reactant and product R103
+SBML at Vibrio vulnificus.xml --> JSON at Vibrio vulnificus.json
+SBML at Yersinia pestis CO92.xml --> JSON at Yersinia pestis CO92.json
